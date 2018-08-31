@@ -16,7 +16,8 @@ h2 {
     font-family: 'Roboto';
     font-weight: 50;
     font-size: 1.5em;
-    margin: 0em
+    margin-top: 0em;
+    margin-bottom: 1em
 }
 
 .topper {
@@ -27,7 +28,8 @@ h2 {
     display: block;
     width: 50%;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    margin-top: 2em
 }
 
 .raceButtons {
