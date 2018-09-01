@@ -28,7 +28,7 @@ h3 {}
 
 .racePic {
     display: block;
-    width: 50%;
+    max-width: 720px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
