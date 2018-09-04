@@ -5,20 +5,17 @@ window.onload = function () {
     var racePage = document.getElementById('race_page');
     var racePic = document.getElementById('racePic');
 
-    introPage.addEventListener('click', function () {
+    function introChange() {
         introPage.style.display = 'none';
         racePage.style.display = 'block';
-    });
+    }
 
-    racePic.addEventListener('click', function () {
-        racePage.style.display = 'none';
-        introPage.style.display = 'block';
-    });
+
+    introPage.addEventListener('click', introChange, false);
 }
 
 
 
 function ChangeImage(image) {
     racePic.src = (image + '.png');
-    racePic.removeEventListener('click');
 }
