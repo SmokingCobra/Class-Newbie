@@ -27,6 +27,12 @@ h3 {}
     display: block;
 }
 
+.intro_text {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
 #race_page {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
