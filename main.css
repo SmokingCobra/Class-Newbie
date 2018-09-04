@@ -50,12 +50,14 @@ h3 {}
     margin-bottom: 2em
 }
 
-#raceButtons {
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto
+@media @media only screen and (max-width: 720px) {
+    #raceButtons {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto
+    }
 }
 
 input[type=radio] {
