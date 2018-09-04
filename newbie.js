@@ -20,4 +20,5 @@ window.onload = function () {
 
 function ChangeImage(image) {
     racePic.src = (image + '.png');
+    racePic.removeEventListener('click');
 }
