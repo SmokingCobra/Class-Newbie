@@ -8,71 +8,84 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Lato|Open+Sans|Oswald|Raleway|Roboto">
     <link rel="stylesheet" href="main.css">
 
+    <script type="text/javascript" src="newbie.js"></script>
+
     <title>Class: Newbie</title>
 </head>
 
 <body>
 
-    <div id='race_content'>
+    <div id='content'>
         <div class='topper'>
             <h1>Class: Newbie</h1>
             <h2>A character builder for the less experienced.</h2>
         </div>
 
-        <div>
-            <img class='racePic' src='classes.png' alt='5e Classes'>
+        <div id='intro_page'>
+            <div class='intro_text'>
+                <p>
+                    Welcome to the Class: Newbie characer generator! Wheteher you're brand new to DnD, or just need something simple and straight forware, you'll find it here!
+                </p>
+            </div>
+            <div>
+                <button id='get_started' type="button">Get Started!</button>
+            </div>
         </div>
 
-        <div class='raceButtons'>
+        <div id='race_page'>
+            <div>
+                <img class='racePic' src='classes.png' alt='5e Classes'>
+            </div>
 
-            <form id='buttons' action="">
+            <div class='raceButtons'>
 
-                <label>
-                    <input type='radio' class='radio' name='race' value='Dragonborn'>
-                    <h3>Dragonborn</h3>
-                </label>
-                <label>
-                    <input type='radio' class='radio' name='race' value='Dwarf'>
-                    <h3>Dwarf</h3>
-                </label>
-                <label>
-                    <input type='radio' class='radio' name='race' value='Elf'>
-                    <h3>Elf</h3>
-                </label>
-                <label>
-                    <input type='radio' class='radio' name='race' value='Gnome'>
-                    <h3>Gnome</h3>
-                </label>
-                <label>
-                    <input type='radio' class='radio' name='race' value='Half-Elf'>
-                    <h3>Half-Elf</h3>
-                </label>
-                <label>
-                    <input type='radio' class='radio' name='race' value='Half-Orc'>
-                    <h3>Hallf-Orc</h3>
-                </label>
-                <label>
-                    <input type='radio' class='radio' name='race' value='Halfling'>
-                    <h3>Halfing</h3>
-                </label>
-                <label>
-                    <input type='radio' class='radio' name='race' value='Human' checked>
-                    <h3>Human</h3>
-                </label>
-                <label>
-                    <input type='radio' class='radio' name='race' value='Tiefling'>
-                    <h3>Tiefling</h3>
-                </label>
+                <form id='buttons' action="">
 
+                    <label>
+                        <input type='radio' class='radio' name='race' value='Dragonborn'>
+                        <h3>Dragonborn</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='race' value='Dwarf'>
+                        <h3>Dwarf</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='race' value='Elf'>
+                        <h3>Elf</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='race' value='Gnome'>
+                        <h3>Gnome</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='race' value='Half-Elf'>
+                        <h3>Half-Elf</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='race' value='Half-Orc'>
+                        <h3>Hallf-Orc</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='race' value='Halfling'>
+                        <h3>Halfing</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='race' value='Human' checked>
+                        <h3>Human</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='race' value='Tiefling'>
+                        <h3>Tiefling</h3>
+                    </label>
 
-            </form>
+                </form>
+
+            </div>
 
         </div>
 
     </div>
 
 </body>
-
-<script src="newbie.js"></script>
 
 </html>

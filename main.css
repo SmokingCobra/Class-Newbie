@@ -19,11 +19,19 @@ h3 {}
     text-align: center
 }
 
-#race_content {
+#intro_page {
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     margin: 0em;
+    text-align: center;
+    display: block;
+}
 
+#race_page {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    margin: 0em;
+    display: none;
 }
 
 .racePic {
