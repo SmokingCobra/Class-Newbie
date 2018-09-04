@@ -1,11 +1,23 @@
 window.onload = function () {
-    document.getElementById('get_started').addEventListener('click', function () {
-        document.getElementById('intro_page').style.display = 'none';
-        document.getElementById('race_page').style.display = 'block';
+
+    var introPage = document.getElementById('intro_page');
+    var introButton = document.getElementById('get_started');
+    var racePage = document.getElementById('race_page');
+    var racePic = document.getElementById('racePic');
+
+    introPage.addEventListener('click', function () {
+        introPage.style.display = 'none';
+        racePage.style.display = 'block';
     });
 
-    document.getElementById('race_page').addEventListener('click', function () {
-        this.style.display = 'none';
-        document.getElementById('intro_page').style.display = 'block';
+    racePic.addEventListener('click', function () {
+        racePage.style.display = 'none';
+        introPage.style.display = 'block';
     });
+}
+
+
+
+function ChangeImage(image) {
+    racePic.src = (image + '.png');
 }
