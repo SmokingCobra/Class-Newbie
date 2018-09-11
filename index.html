@@ -15,11 +15,27 @@
 
 <body>
 
+    <div id="sideNav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+
+    </div>
+
+    <span onclick="openNav()">
+        <h4>&#9776; Character</h4>
+    </span>
+
     <div id='content'>
         <div class='topper'>
             <h1>Class: Newbie</h1>
             <h2>A character builder for the less experienced.</h2>
         </div>
+
+
 
         <div id='intro_page'>
             <div id='intro_text'>
@@ -70,7 +86,7 @@
                         <h3>Halfing</h3>
                     </label>
                     <label>
-                        <input type='radio' class='radio' name='race' value='Human' onclick="ChangeImage('human')" checked>
+                        <input type='radio' class='radio' name='race' value='Human' onclick="ChangeImage('human')">
                         <h3>Human</h3>
                     </label>
                     <label>

@@ -14,8 +14,17 @@ window.onload = function () {
     introPage.addEventListener('click', introChange, false);
 }
 
-
-
+/* Change the picture depending on race selection */
 function ChangeImage(image) {
     racePic.src = (image + '.png');
+}
+
+/* Set the width of the side navigation to 250px */
+function openNav() {
+    document.getElementById("sideNav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("sideNav").style.width = "0";
 }

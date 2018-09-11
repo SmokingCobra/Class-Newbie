@@ -1,12 +1,17 @@
+body {
+    font-family: 'Raleway, sans-serif'
+}
+
 h1 {
-    font-weight: bold;
+    font-family: 'Raleway';
+    font-weight: lighter;
     font-size: 4em;
     margin-top: 1em;
     margin-bottom: 0em
 }
 
 h2 {
-    font-family: 'Roboto';
+    font-family: 'Roboto, sans-serif';
     font-weight: 50;
     font-size: 1.5em;
     margin-top: 0em;
@@ -14,6 +19,64 @@ h2 {
 }
 
 h3 {}
+
+h4 {
+    font-family: 'Raleway';
+    font-weight: lighter;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+    font: 'Raleway';
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-family: 'Raleway';
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
 
 .topper {
     text-align: center
@@ -43,6 +106,7 @@ h3 {}
 #racePic {
     display: block;
     max-height: 480px;
+    min-height: 480px;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
