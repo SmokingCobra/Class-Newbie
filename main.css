@@ -42,15 +42,15 @@ h3 {}
 
 #racePic {
     display: block;
-    height: 480px;
-    max-width: ;
+    max-height: 480px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;
     margin-bottom: 2em
 }
 
-@media @media only screen and (max-width: 720px) {
+@media only screen and (max-width: 720px) {
     #raceButtons {
         text-align: center;
         display: block;
@@ -60,10 +60,25 @@ h3 {}
     }
 }
 
+#raceButtons {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto
+}
+
 input[type=radio] {
     text-align: center;
     display: inline-block;
     margin: 1em
+}
+
+@media only screen and (max-width: 720px) {
+    label {
+        display: inline-block;
+        width: 33%
+    }
 }
 
 label {
