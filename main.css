@@ -43,7 +43,7 @@ h3 {}
 #racePic {
     display: block;
     height: 480px;
-    width: auto;
+    max-width: ;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2em;

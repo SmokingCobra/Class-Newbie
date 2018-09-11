@@ -1,0 +1,156 @@
+races[
+    dragonborn {
+        "str_mod": "2",
+        "dex_mod": "0",
+        "con_mod": "0",
+        "int_mod": "0",
+        "wis_mod": "0",
+        "chr_mod": "2",
+        "size": "medium",
+        "speed": "30",
+        "languages": ["Common", "Draconic"],
+        "traits": "Ancestry"
+    },
+    dwarf {
+        "str_mod": "0",
+        "dex_mod": "0",
+        "con_mod": "2",
+        "int_mod": "0",
+        "wis_mod": "0",
+        "chr_mod": "0",
+        "size": "medium",
+        "speed": "25",
+        "languages": ["Common", "Dwarvish"],
+        "traits": ["Darkvision", "Dwarven Resiliance", "Dwarven Combat Training", "Tool Proficiency", "Stone Cunning"]
+    },
+    elf {
+        "str_mod": "0",
+        "dex_mod": "2",
+        "con_mod": "0",
+        "int_mod": "0",
+        "wis_mod": "0",
+        "chr_mod": "0",
+        "size": "medium",
+        "speed": "30",
+        "languages": ["Common", "Elvish"],
+        "traits": ["Darkvision", "Keen Senses", "Fey Ancestry", "Trance"]
+    },
+    gnome {
+        "str_mod": "0",
+        "dex_mod": "0",
+        "con_mod": "0",
+        "int_mod": "2",
+        "wis_mod": "0",
+        "chr_mod": "0",
+        "size": "small",
+        "speed": "25",
+        "languages": ["Common", "Gnomish"],
+        "traits": ["Darkvision", "Gnome Cunning"]
+    },
+    halfelf {
+        "str_mod": "0",
+        "dex_mod": "0",
+        "con_mod": "0",
+        "int_mod": "0",
+        "wis_mod": "0",
+        "chr_mod": "2",
+        "size": "medium",
+        "speed": "30",
+        "languages": ["Common", "Elvish", "Extra"],
+        "traits": ["Darkvision", "Fey Ancestry", "Extra", "Extra"]
+    },
+    halforc {
+        "str_mod": "2",
+        "dex_mod": "0",
+        "con_mod": "1",
+        "int_mod": "0",
+        "wis_mod": "0",
+        "chr_mod": "0",
+        "size": "medium",
+        "speed": "30",
+        "languages": ["Common", "Orc"],
+        "traits": ["Darkvision", "Menacing", "Relentless Endurance", "Savage Attacks"]
+    },
+    halfling {
+        "str_mod": "0",
+        "dex_mod": "2",
+        "con_mod": "0",
+        "int_mod": "0",
+        "wis_mod": "0",
+        "chr_mod": "0",
+        "size": "small",
+        "speed": "25",
+        "languages": ["Common", "Halfing"],
+        "traits": ["Lucky", "Brave", "Halfing Nimbleness"]
+    },
+    human {
+        "str_mod": "1",
+        "dex_mod": "1",
+        "con_mod": "1",
+        "int_mod": "1",
+        "wis_mod": "1",
+        "chr_mod": "1",
+        "size": "medium",
+        "speed": "30",
+        "languages": ["Common", "Extra"],
+        "traits": "none"
+    },
+    tiefling {
+        "str_mod": "0",
+        "dex_mod": "0",
+        "con_mod": "0",
+        "int_mod": "1",
+        "wis_mod": "0",
+        "chr_mod": "2",
+        "size": "medium",
+        "speed": "30",
+        "languages": ["Common", "Infernal"],
+        "traits": ["Darkvision", "Hellish Resistance", "Infernal Legacy"]
+    }
+    ]
+
+classes[
+    barbarian {
+        "proficiency bonus": "2",
+        "features": ["rage", "unarmored defense"],
+        "hit_die": "1d12",
+        "hit_points": ["12", "con"],
+        "proficiencies": ["light armor", "medium armor", "shields", "simple weapons", "martial weapons", "str_saving", "con_saving", "extra", "extra"],
+        "skill_choice": ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"],
+
+
+    }
+    bard {
+
+    }
+    cleric {
+
+    }
+    druid {
+
+    }
+    fighter {
+
+    }
+    monk {
+
+    }
+    paladin {
+
+    }
+    ranger {
+
+    }
+    rogue {
+
+    }
+    sorcerer {
+
+    }
+    warlock {
+
+    }
+    wizard {
+
+    }
+    ]
