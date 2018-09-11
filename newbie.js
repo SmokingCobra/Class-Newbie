@@ -30,14 +30,14 @@ function closeNav() {
 }
 
 var character = {
-    charName = "None",
-    charRace = "None",
-    charClass = "None",
-    charAlign = "None",
-    charStr = 0,
-    charDex = 0,
-    charCon = 0,
-    charInt = 0,
-    charWis = 0,
-    charChr = 0,
+    charName: "None",
+    charRace: "None",
+    charClass: "None",
+    charAlign: "None",
+    charStr: 0,
+    charDex: 0,
+    charCon: 0,
+    charInt: 0,
+    charWis: 0,
+    charChr: 0
 }

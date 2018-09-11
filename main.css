@@ -6,7 +6,7 @@ h1 {
     font-family: 'Raleway';
     font-weight: lighter;
     font-size: 4em;
-    margin-top: 1em;
+    margin-top: .25em;
     margin-bottom: 0em
 }
 
@@ -25,6 +25,25 @@ h4 {
     -webkit-margin-after: 0;
 }
 
+#sidepullout {
+    position: absolute;
+    left: 10px;
+    top: 10px
+}
+
+#sidepullout:hover {
+    cursor: pointer;
+}
+
+#refresh {
+    position: absolute;
+    right: 10px;
+    top: 10px
+}
+
+#refresh:hover {
+    cursor: pointer;
+}
 
 .sidenav {
     height: 100%;
@@ -77,7 +96,8 @@ h4 {
 }
 
 .topper {
-    text-align: center
+    text-align: center;
+
 }
 
 #intro_page {
