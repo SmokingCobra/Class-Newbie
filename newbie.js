@@ -4,14 +4,33 @@ window.onload = function () {
     var introButton = document.getElementById('get_started');
     var racePage = document.getElementById('race_page');
     var racePic = document.getElementById('racePic');
+    var classPage = document.getElementById('class_page');
+    var race2ClassButton = document.getElementById('race2Class')
+    var class2RaceButton = document.getElementById('class2Race')
+
+    introButton.addEventListener('click', introChange, false);
+    introButton.addEventListener('click', nameSet, false);
+    race2ClassButton.addEventListener('click', race2classChange, false);
+    race2ClassButton.addEventListener('click', raceSet, false);
+    class2RaceButton.addEventListener('click', class2raceChange, false);
 
     function introChange() {
         introPage.style.display = 'none';
         racePage.style.display = 'block';
+        classPage.style.display = 'none';
     };
 
-    introButton.addEventListener('click', introChange, false);
-    introButton.addEventListener('click', nameChange, false);
+    function race2classChange() {
+        introPage.style.display = 'none';
+        racePage.style.display = 'none';
+        classPage.style.display = 'block';
+    };
+
+    function class2raceChange() {
+        introPage.style.display = 'none';
+        racePage.style.display = 'block';
+        classPage.style.display = 'none';
+    }
 };
 
 /* */
@@ -74,7 +93,7 @@ class character {
 }
 
 /* Change the picture depending on race selection */
-function ChangeImage(image) {
+function ChangeRaceImage(image) {
     racePic.src = (image + '.png');
 }
 
@@ -89,9 +108,23 @@ function closeNav() {
 }
 
 /* Takes the user's name input and sets the objects name field */
-function nameChange() {
-    newChar.charName = document.getElementById('charNameInput').value;
+function nameSet() {
+    var nameText = "Name: ";
+    var name = document.getElementById('charNameInput').value;
+    newChar.charName = name;
+    document.getElementById("sideName").innerHTML = nameText.concat(name);
 }
+
+function raceSet() {
+    var raceText = "Race: ";
+    console.log(raceText);
+    var race = document.querySelector('input[name = "race"]:checked').value;
+    console.log(race);
+    newChar.charRace = race;
+    console.log(newChar.charRace);
+    document.getElementById("sideRace").innerHTML = raceText.concat(race);
+}
+
 
 /* Create the character for the user*/
 const newChar = new character;

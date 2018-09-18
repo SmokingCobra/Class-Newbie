@@ -18,9 +18,9 @@
     <div id="sideNav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-        <a href="#">Name: </a>
-        <a href="#">Race: </a>
-        <a href="#">Class: </a>
+        <a id="sideName">Name: </a>
+        <a id="sideRace">Race: </a>
+        <a id="sideClass">Class: </a>
 
     </div>
 
@@ -67,45 +67,125 @@
                 <form autocomplete='off' id='buttons' action="">
 
                     <label>
-                        <input type='radio' class='radio' name='race' value='Dragonborn' onclick="ChangeImage('dragonborn')">
+                        <input type='radio' class='radio' name='race' value='Dragonborn' onclick="ChangeRaceImage('dragonborn')">
                         <h3>Dragonborn</h3>
                     </label>
                     <label>
-                        <input type='radio' class='radio' name='race' value='Dwarf' onclick="ChangeImage('dwarf')">
+                        <input type='radio' class='radio' name='race' value='Dwarf' onclick="ChangeRaceImage('dwarf')">
                         <h3>Dwarf</h3>
                     </label>
                     <label>
-                        <input type='radio' class='radio' name='race' value='Elf' onclick="ChangeImage('elf')">
+                        <input type='radio' class='radio' name='race' value='Elf' onclick="ChangeRaceImage('elf')">
                         <h3>Elf</h3>
                     </label>
                     <label>
-                        <input type='radio' class='radio' name='race' value='Gnome' onclick="ChangeImage('gnome')">
+                        <input type='radio' class='radio' name='race' value='Gnome' onclick="ChangeRaceImage('gnome')">
                         <h3>Gnome</h3>
                     </label>
                     <label>
-                        <input type='radio' class='radio' name='race' value='Half-Elf' onclick="ChangeImage('halfelf')">
+                        <input type='radio' class='radio' name='race' value='Half-Elf' onclick="ChangeRaceImage('halfelf')">
                         <h3>Half-Elf</h3>
                     </label>
                     <label>
-                        <input type='radio' class='radio' name='race' value='Half-Orc' onclick="ChangeImage('halforc')">
+                        <input type='radio' class='radio' name='race' value='Half-Orc' onclick="ChangeRaceImage('halforc')">
                         <h3>Half-Orc</h3>
                     </label>
                     <label>
-                        <input type='radio' class='radio' name='race' value='Halfling' onclick="ChangeImage('halfing')">
+                        <input type='radio' class='radio' name='race' value='Halfling' onclick="ChangeRaceImage('halfing')">
                         <h3>Halfing</h3>
                     </label>
                     <label>
-                        <input type='radio' class='radio' name='race' value='Human' onclick="ChangeImage('human')">
+                        <input type='radio' class='radio' name='race' value='Human' onclick="ChangeRaceImage('human')">
                         <h3>Human</h3>
                     </label>
                     <label>
-                        <input type='radio' class='radio' name='race' value='Tiefling' onclick="ChangeImage('tiefling')">
+                        <input type='radio' class='radio' name='race' value='Tiefling' onclick="ChangeRaceImage('tiefling')">
                         <h3>Tiefling</h3>
                     </label>
 
                 </form>
 
             </div>
+
+            <div class='pageChangeButton'>
+                <button id='race2Class' type="button">Class &rarr;</button>
+            </div>
+
+        </div>
+
+        <div id='class_page'>
+            <div>
+                <img id='classPic' src='classes.png' alt='5e Classes'>
+            </div>
+
+            <div id='classButtons'>
+
+                <form autocomplete='off' id='buttons' action="">
+
+                    <label>
+                        <input type='radio' class='radio' name='class' value='Barbarian' onclick="ChangeClassImage('barbarian')">
+                        <h3>Barbarian</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='class' value='Bard' onclick="ChangeClassImage('bard')">
+                        <h3>Bard</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='class' value='Cleric' onclick="ChangeClassImage('cleric')">
+                        <h3>Cleric</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='class' value='Druid' onclick="ChangeClassImage('Druid')">
+                        <h3>Druid</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='class' value='Fighter' onclick="ChangeClassImage('fighter')">
+                        <h3>Fighter</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='class' value='Monk' onclick="ChangeClassImage('monk')">
+                        <h3>Monk</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='class' value='Paladin' onclick="ChangeClassImage('paladin')">
+                        <h3>Paladin</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='class' value='Ranger' onclick="ChangeClassImage('ranger')">
+                        <h3>Ranger</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='class' value='Rogue' onclick="ChangeClassImage('rogue')">
+                        <h3>Rogue</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='class' value='Sorcerer' onclick="ChangeClassImage('sorcerer')">
+                        <h3>Sorcerer</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='class' value='Warlock' onclick="ChangeClassImage('warlock')">
+                        <h3>Warlock</h3>
+                    </label>
+                    <label>
+                        <input type='radio' class='radio' name='class' value='Wizard' onclick="ChangeClassImage('wizard')">
+                        <h3>Wizard</h3>
+                    </label>
+
+                </form>
+
+            </div>
+
+            <div class='buttonContainer'>
+                <div class='pageChangeButton'>
+                    <button id='class2Race' type="button">Race &larr;
+                    </button>
+                </div>
+                <div class='pageChangeButton'>
+                    <button id='class2Next' type="button">Next &rarr;
+                    </button>
+                </div>
+            </div>
+
 
         </div>
 

@@ -156,10 +156,77 @@ h4 {
     width: auto
 }
 
+#class_page {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    margin: 0em;
+    display: none;
+}
+
+@media only screen and (max-width: 720px) {
+    #classPic {
+        min-height: initial !important
+    }
+}
+
+#classPic {
+    display: block;
+    max-height: 480px;
+    min-height: 480px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    margin-bottom: 2em
+}
+
+@media only screen and (max-width: 720px) {
+    #classButtons {
+        text-align: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto
+    }
+}
+
+#classButtons {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto
+}
+
 input[type=radio] {
     text-align: center;
     display: inline-block;
     margin: 1em
+}
+
+.buttonContainer {
+    max-width: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pageChangeButton {
+    text-align: center;
+}
+
+#class2Race {
+    float: left;
+}
+
+#class2Next {
+    float: right;
+}
+
+#class_page {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    margin: 0em;
+    display: none;
 }
 
 @media only screen and (max-width: 720px) {
