@@ -148,7 +148,7 @@ h4 {
     }
 }
 
-#raceButtons {
+#Buttons {
     text-align: center;
     display: block;
     margin-left: auto;
@@ -188,14 +188,6 @@ h4 {
         margin-right: auto;
         width: auto
     }
-}
-
-#classButtons {
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto
 }
 
 input[type=radio] {

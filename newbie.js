@@ -15,22 +15,33 @@ window.onload = function () {
     class2RaceButton.addEventListener('click', class2raceChange, false);
 
     function introChange() {
-        introPage.style.display = 'none';
-        racePage.style.display = 'block';
-        classPage.style.display = 'none';
+        if (document.getElementById('charNameInput').value != '') {
+            introPage.style.display = 'none';
+            racePage.style.display = 'block';
+            classPage.style.display = 'none';
+        } else {
+
+        }
+
     };
 
     function race2classChange() {
-        introPage.style.display = 'none';
-        racePage.style.display = 'none';
-        classPage.style.display = 'block';
+        if (raceCheck) {
+            introPage.style.display = 'none';
+            racePage.style.display = 'none';
+            classPage.style.display = 'block';
+        }
     };
 
     function class2raceChange() {
-        introPage.style.display = 'none';
-        racePage.style.display = 'block';
-        classPage.style.display = 'none';
+        if (classCheck) {
+            introPage.style.display = 'none';
+            racePage.style.display = 'block';
+            classPage.style.display = 'none';
+        }
     }
+
+
 };
 
 /* */
@@ -117,14 +128,35 @@ function nameSet() {
 
 function raceSet() {
     var raceText = "Race: ";
-    console.log(raceText);
     var race = document.querySelector('input[name = "race"]:checked').value;
-    console.log(race);
     newChar.charRace = race;
-    console.log(newChar.charRace);
     document.getElementById("sideRace").innerHTML = raceText.concat(race);
 }
 
+function raceCheck() {
+    console.log('In function');
+
+    var raceForm = document.getElementById('racebuttons');
+
+    for (var i = 0; i < raceForm.length; i++) {
+        if (raceForm[i].type = 'radio' && raceForm[i].checked) {
+            console.log(raceForm[i].value);
+            return true;
+        }
+    }
+    return false;
+}
+
+function classCheck() {
+    var raceForm = document.getElementById('classbuttons');
+
+    for (var i = 0; i < raceForm.length; i++) {
+        if (classForm[i].type = 'radio' && classForm[i].checked) {
+            return true;
+        }
+    }
+    return false;
+}
 
 /* Create the character for the user*/
 const newChar = new character;
