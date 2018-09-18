@@ -26,7 +26,7 @@ window.onload = function () {
     };
 
     function race2classChange() {
-        if (raceCheck) {
+        if (raceCheck()) {
             introPage.style.display = 'none';
             racePage.style.display = 'none';
             classPage.style.display = 'block';
@@ -40,6 +40,10 @@ window.onload = function () {
             classPage.style.display = 'none';
         }
     }
+
+
+
+
 
 
 };
@@ -147,11 +151,22 @@ function raceCheck() {
     return false;
 }
 
+function raceCheck() {
+    var raceForm = document.getElementById('racebuttons');
+
+    for (var i = 0; i < raceForm.length; i++) {
+        if (raceForm[i].checked) {
+            return true;
+        }
+    }
+    return false;
+}
+
 function classCheck() {
     var raceForm = document.getElementById('classbuttons');
 
     for (var i = 0; i < raceForm.length; i++) {
-        if (classForm[i].type = 'radio' && classForm[i].checked) {
+        if (classForm[i].checked) {
             return true;
         }
     }
