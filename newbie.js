@@ -5,24 +5,28 @@ window.onload = function () {
     var racePage = document.getElementById('race_page');
     var racePic = document.getElementById('racePic');
     var classPage = document.getElementById('class_page');
-    var race2ClassButton = document.getElementById('race2Class')
-    var class2RaceButton = document.getElementById('class2Race')
+    var race2ClassButton = document.getElementById('race2Class');
+    var class2RaceButton = document.getElementById('class2Race');
+    var class2NextButton = document.getElementById('class2Next')
 
     introButton.addEventListener('click', introChange, false);
     introButton.addEventListener('click', nameSet, false);
+
     race2ClassButton.addEventListener('click', race2classChange, false);
     race2ClassButton.addEventListener('click', raceSet, false);
+
     class2RaceButton.addEventListener('click', class2raceChange, false);
+
+    class2NextButton.addEventListener('click', class2nextChange, false);
+    class2NextButton.addEventListener('click', classSet, false)
 
     function introChange() {
         if (document.getElementById('charNameInput').value != '') {
             introPage.style.display = 'none';
             racePage.style.display = 'block';
             classPage.style.display = 'none';
-        } else {
-
+            next.style.display = 'none';
         }
-
     };
 
     function race2classChange() {
@@ -30,19 +34,25 @@ window.onload = function () {
             introPage.style.display = 'none';
             racePage.style.display = 'none';
             classPage.style.display = 'block';
+            next.style.display = 'none';
         }
     };
 
     function class2raceChange() {
-        if (classCheck) {
-            introPage.style.display = 'none';
-            racePage.style.display = 'block';
-            classPage.style.display = 'none';
-        }
+        introPage.style.display = 'none';
+        racePage.style.display = 'block';
+        classPage.style.display = 'none';
+        next.style.display = 'none';
     }
 
-
-
+    function class2nextChange() {
+        if (classCheck()) {
+            introPage.style.display = 'none';
+            racePage.style.display = 'none';
+            classPage.style.display = 'none';
+            next.style.display = 'block';
+        }
+    }
 
 
 
@@ -109,7 +119,7 @@ class character {
 
 /* Change the picture depending on race selection */
 function ChangeRaceImage(image) {
-    racePic.src = (image + '.png');
+    racePic.src = ('images/' + image + '.png');
 }
 
 /* Set the width of the side navigation to 250px */
@@ -125,30 +135,23 @@ function closeNav() {
 /* Takes the user's name input and sets the objects name field */
 function nameSet() {
     var nameText = "Name: ";
-    var name = document.getElementById('charNameInput').value;
-    newChar.charName = name;
-    document.getElementById("sideName").innerHTML = nameText.concat(name);
+    var charName = document.getElementById('charNameInput').value;
+    newChar.charName = charName;
+    document.getElementById("sideName").innerHTML = nameText.concat(charName);
 }
 
 function raceSet() {
     var raceText = "Race: ";
-    var race = document.querySelector('input[name = "race"]:checked').value;
-    newChar.charRace = race;
-    document.getElementById("sideRace").innerHTML = raceText.concat(race);
+    var charRace = document.querySelector('input[name = "race"]:checked').value;
+    newChar.charRace = charRace;
+    document.getElementById("sideRace").innerHTML = raceText.concat(charRace);
 }
 
-function raceCheck() {
-    console.log('In function');
-
-    var raceForm = document.getElementById('racebuttons');
-
-    for (var i = 0; i < raceForm.length; i++) {
-        if (raceForm[i].type = 'radio' && raceForm[i].checked) {
-            console.log(raceForm[i].value);
-            return true;
-        }
-    }
-    return false;
+function classSet() {
+    var classText = "Class: ";
+    var charClass = document.querySelector('input[name = "class"]:checked').value;
+    newChar.charClass = charClass;
+    document.getElementById("sideClass").innerHTML = classText.concat(charClass);
 }
 
 function raceCheck() {
@@ -163,9 +166,9 @@ function raceCheck() {
 }
 
 function classCheck() {
-    var raceForm = document.getElementById('classbuttons');
+    var classForm = document.getElementById('classbuttons');
 
-    for (var i = 0; i < raceForm.length; i++) {
+    for (var i = 0; i < classForm.length; i++) {
         if (classForm[i].checked) {
             return true;
         }
