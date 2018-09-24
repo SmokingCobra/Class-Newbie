@@ -9,16 +9,15 @@ window.onload = function () {
     var class2RaceButton = document.getElementById('class2Race');
     var class2NextButton = document.getElementById('class2Next')
 
+
     introButton.addEventListener('click', introChange, false);
     introButton.addEventListener('click', nameSet, false);
-
     race2ClassButton.addEventListener('click', race2classChange, false);
     race2ClassButton.addEventListener('click', raceSet, false);
-
     class2RaceButton.addEventListener('click', class2raceChange, false);
-
     class2NextButton.addEventListener('click', class2nextChange, false);
-    class2NextButton.addEventListener('click', classSet, false)
+    class2NextButton.addEventListener('click', classSet, false);
+
 
     function introChange() {
         if (document.getElementById('charNameInput').value != '') {
@@ -53,12 +52,9 @@ window.onload = function () {
             next.style.display = 'block';
         }
     }
-
-
-
 };
 
-/* */
+
 class character {
     constructor() {
         this.charName = "None";
@@ -122,17 +118,15 @@ function ChangeRaceImage(image) {
     racePic.src = ('images/' + image + '.png');
 }
 
-/* Set the width of the side navigation to 250px */
 function openNav() {
     document.getElementById("sideNav").style.width = "250px";
 }
 
-/* Set the width of the side navigation to 0 */
 function closeNav() {
     document.getElementById("sideNav").style.width = "0";
 }
 
-/* Takes the user's name input and sets the objects name field */
+/* Takes the user's name input and sets the object's name field */
 function nameSet() {
     var nameText = "Name: ";
     var charName = document.getElementById('charNameInput').value;
@@ -140,6 +134,7 @@ function nameSet() {
     document.getElementById("sideName").innerHTML = nameText.concat(charName);
 }
 
+/* Takes the user's race selection and sets the object's race field */
 function raceSet() {
     var raceText = "Race: ";
     var charRace = document.querySelector('input[name = "race"]:checked').value;
@@ -147,6 +142,7 @@ function raceSet() {
     document.getElementById("sideRace").innerHTML = raceText.concat(charRace);
 }
 
+/* Takes the user's class selection and sets the object's class field */
 function classSet() {
     var classText = "Class: ";
     var charClass = document.querySelector('input[name = "class"]:checked').value;
@@ -154,6 +150,7 @@ function classSet() {
     document.getElementById("sideClass").innerHTML = classText.concat(charClass);
 }
 
+/* Checks if a user has selected a race, otherwise won't let the user continue */
 function raceCheck() {
     var raceForm = document.getElementById('racebuttons');
 
@@ -165,6 +162,7 @@ function raceCheck() {
     return false;
 }
 
+/* Checks if a user has selected a class, otherwise won't let the user continue */
 function classCheck() {
     var classForm = document.getElementById('classbuttons');
 
