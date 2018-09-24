@@ -46,7 +46,7 @@ h4 {
 }
 
 .sidenav {
-    height: 100%;
+    height: -webkit-fill-available;
     width: 0;
     position: fixed;
     z-index: 1;
@@ -56,7 +56,7 @@ h4 {
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
-    font: 'Raleway';
+    font-family: 'Raleway';
 }
 
 .sidenav a {
